@@ -32,6 +32,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 # Application definition
 
 INSTALLED_APPS = [
+    'widget_tweaks',
     'app',
     
     'django.contrib.admin',
@@ -156,7 +157,12 @@ if not DEBUG:
  AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 
-# import django_heroku
-# django_heroku.settings(locals())
+# メールサーバー用
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'raiseha.nekogaii777@gmail.com'
+EMAIL_HOST_PASSWORD = 'ikxrodxsvoeksomt'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
