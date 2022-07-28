@@ -130,7 +130,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-#Heroku database
+#Heroku databaseaa
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
@@ -149,7 +149,7 @@ if not DEBUG:
  # AWS settings
  
  DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
- AWS_STORAGE_BUCKET_NAME = 'feel-coordinations' #!
+ AWS_STORAGE_BUCKET_NAME = 'izumidensetu'
  AWS_S3_REGION_NAME = 'ap-northeast-3'
  
  AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
