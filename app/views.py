@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
-# Create your views here.
+from django.http import HttpResponse
+from django.conf import settings
+from django.core.mail import BadHeaderError, send_mail
+
+
+def index(request):
+
+
+    return render(request, 'app/base.html')
