@@ -1,5 +1,5 @@
 # デプロイ後でもエラーメッセージを見れるようにする
-from shop import views
+from app import views
 
 handler500 = views.my_customized_server_error
 
