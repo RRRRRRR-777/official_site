@@ -1,48 +1,17 @@
-<style>
-    .field {
-        margin-top: 20px;
-    }
-
-    label {
-        display: block;
-    }
-
-    input {
-        width: 20%;
-        padding: 5px;
-        box-sizing: border-box;
-        border: solid 2px;
-    }
-
-    .help {
-        color: red;
-    }
-
-    textarea {
-        width: 50%;
-        box-sizing: border-box;
-        border-radius: 4px;
-        border: solid 2px;
-    }
-
-    button {
-        margin-top: 30px;
-        width: 10%;
-        padding: 5px;
-    }
-
-</style>
-
-
-{% load widget_tweaks %}
+{% load static widget_tweaks %}
 
 
 <div class="div-group" id="formpage">
-    <div class="container">
         <center>
             <h1 class="fw-bold -2">お問い合わせ</h1>
             <br>
-    
+            <div id="formpage_div">
+                <img src="{% static 'img/img.PNG' %}" alt="izuden_header">
+            </div>
+            <h4>
+                お問い合わせフォーム<br>
+                当社へのお仕事依頼・採用等のご質問などお気軽にご連絡ください
+            </h4>
             <div id="form-content">
                 <form action="{% url 'app:index' %}" method="POST">
                     {% csrf_token %}
@@ -179,13 +148,46 @@
                                 {{ f.message.errors }}
                             </div>
                         </div>
-                    </div>
-    
-    
                     {% endwith %}
                     <button type="submit">送信</button>
                 </form>
             </div>
+            <div class="sentence">
+                ＜個人情報の利用目的＞<br>
+                お客様よりお預かりした個人情報は、以下の目的に限定し<br>
+                利用させていただきます。<br>
+                ・本サービスに関する顧客管理<br>
+                ・本サービスの運営上必要な事項のご連絡<br>
+                <br>
+                ＜個人情報の提供について＞<br>
+                当社ではお客様の同意を得た場合または法令に定められた場合を除き、<br>
+                取得した個人情報を第三者に提供することはいたしません。<br>
+                <br>
+                ＜個人情報の委託について＞<br>
+                弊社では、利用目的の達成に必要な範囲において、個人情報を<br>
+                外部に委託する場合があります。<br>
+                これらの委託先に対しては個人情報保護契約等の措置をとり、<br>
+                適切な監督を行います。<br>
+                <br>
+                ＜個人情報の安全管理＞<br>
+                当社では、個人情報の漏洩等がなされないよう、<br>
+                適切に安全管理対策を実施します。<br>
+                <br>
+                ＜個人情報を与えなかった場合に生じる結果＞<br>
+                必要な情報を頂けない場合は、それに対応した弊社のサービスを<br>
+                ご提供できない場合がございますので予めご了承ください。<br>
+                <br>
+                ＜個人情報の開示･訂正・削除･利用停止の手続について＞<br>
+                当社では、お客様の個人情報の開示･訂正･削除・利用停止の手続を<br>
+                定めさせて頂いております。<br>
+                ご本人である事を確認のうえ、対応させて頂きます。<br>
+                個人情報の開示･訂正･削除・利用停止の具体的手続きにつきましては、<br>
+                お電話でお問合せ下さい。<br>
+                <div>
         </center>
+        <h1 class="text-center fw-bold mb-4">会社外観写真</h1>
+        <div id="formpage_div">
+            <img src="{% static 'img/izuden04.png' %}" alt="izuden_formpage">
+        </div>
     </div>
 </div>

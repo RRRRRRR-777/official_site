@@ -11,7 +11,9 @@ class ContactForm(forms.Form):
     last_ruby = forms.CharField(label='', max_length=100, widget=forms.TextInput(attrs={'placeholder': '例 : タロウ',}))
     gender = forms.select = forms.fields.ChoiceField(choices = (('男性', '男性'),('女性', '女性'),),
              label='性別', required=True, widget=forms.widgets.RadioSelect)
-    age = forms.DateField(label='生年月日', help_text='カレンダーボタンを押してください', widget = forms.NumberInput(attrs={'type': 'date'}))
+    age = forms.DateField(label='生年月日'
+                        #, help_text='カレンダーボタンを押してください'
+                        ,widget = forms.NumberInput(attrs={'type': 'date'}))
     sender = forms.EmailField(label='メールアドレス', help_text='※ご確認の上、正しく入力してください。', widget=forms.TextInput(attrs={'placeholder': 'aaa@bbb.com',}))
     
     tel_number_regex = RegexValidator(regex=r'^[0-9]+$', message = ("Tel Number must be entered in the format: '09012345678'. Up to 15 digits allowed."))
