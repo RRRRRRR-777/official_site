@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+ /* { */
+    /* outline: 2px red solid; */
+/* } */
+
 body {
     font-size: 10px;
     margin: 0;
@@ -63,13 +67,13 @@ nav #navbarNavAltMarkup {
     }
     nav .navbar-toggler {
         margin-right: 10px;
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
     }
     nav .navbar-toggler-icon {
         margin-right: 10px;
-        width: 60px;
-        height: 60px;
+        width: 30px;
+        height: 30px;
     }
     nav #navbarNavAltMarkup {
         background-color: #87cefa;
@@ -221,7 +225,7 @@ p span {
 #achievement h4 {
     margin-top: 1em;
     font-size: 2.5vw;
-    line-height: 48px;
+    line-height: 2em;
 }
 
 /* address */
@@ -252,6 +256,209 @@ p span {
 }
 
 /* formpage */
+.badge-required {
+    color: rgb(215, 49, 49);
+    padding: 3px;
+    margin-left: 10px;
+    font-size: 0.7em;
+    border: solid;
+    border-radius: 6px;
+}
+
+#formpage h1 {
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+#formpage div {
+    text-align: center;
+}
+#formpage img {
+    width: 96vw;
+}
+
+#formpage h2 {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 4vw;
+    line-height: 1.5em;
+}    
+
+#formpage h2 span{
+    display: inline-block;
+    justify-content: center;
+}
+
+#id_select{
+    margin-bottom: 5em;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#id_select label{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    font-size: 3vw;
+    width: 15vw;
+}
+
+#id_select input{
+    width: 20px;
+    height: 20px;
+}
+
+#name label{
+    font-size: 3vw;
+}
+
+#name input {
+    width: 10em;
+}
+
+#ruby input {
+    width: 10em;
+}
+
+#id_gender{
+    margin-bottom: 5em;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#id_gender label{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    font-size: 3vw;
+    width: 15vw;
+}
+
+#id_gender input{
+    width: 20px;
+    height: 20px;
+}
+
+.id_age {
+    margin-top: 2em;
+    width: 220px;
+    height: 50px;
+    font-size: 2.5em;
+}
+
+.id_sender {
+    margin: auto;
+    margin-top: 3em;
+    width: 20em;
+}
+
+.id_tel_number {
+    margin: auto;
+    margin-top: 3em;
+    width: 20em;
+}
+
+.id_sikucyouson {
+    margin: auto;
+    width: 20em;
+}
+
+.id_bannti {
+    margin: auto;
+    width: 20em;
+}
+
+.id_heyabangou {
+    margin: auto;
+    width: 20em;
+}
+
+#formpage .id_message {
+    margin: auto;
+    resize: none;
+    width: 400px;
+    height: 300px;
+    font-size: 18px;
+}
+
+#formpage button {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    color: black;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 80px;
+    font-size: 2em;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(88, 88, 88) 2px;
+    border-radius: 10px;
+}
+#apperance {
+    margin-top: 2em;
+}
+.sentence {
+    display: block;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+}
+
+.sentence p {
+    font-size: 1vw;
+}
+
+#formpage_div {
+    display: flex;
+    justify-content: center;
+}
+#formpage_div img {
+    width: 96vw;
+}
+
+/* footer */
+
+.footer {
+    text-align: center;
+    background-color: #87cefa;
+    width: 100vw;
+    height: 25px;
+}
+
+.footer span {
+    padding-top: 2%;
+    margin-top: 15px;
+    font-size: 1.2vw;
+}
+
+
+
+/* form css */
+
+div h2 {
+    text-align: center;
+}
+
+.badge-required {
+    color: rgb(215, 49, 49);
+    padding: 3px;
+    margin-left: 10px;
+    font-size: 0.7em;
+    border: solid;
+    border-radius: 6px;
+}
+/* formpage */
+/* #formpage h4 span {
+    display: inline-block;
+}
+
 #formpage_div {
     text-align: center;
 }
@@ -261,13 +468,15 @@ p span {
     width: 96vw;
 }
 
-#formpage h4 {
+#formpage h1 {
     margin: 1.5em 0 1.5em 0;
-    font-size: 3.5em;
+    font-size: 3.8vw;
     font-weight: bold;
 }
 
 #formpage h2 {
+    padding-top: 3px;
+    width: 90%;
     font-size: 4vw;
 }
 
@@ -281,10 +490,11 @@ p span {
 
 #id_select label {
     font-size: 3.5vw;
+    margin-bottom: 30px;
 }
 
 #formpage .id_select {
-    margin: 30px 0 0 0;
+    margin-bottom: 30px;
     padding: 0;
     width: 2em;
     height: 0.5em;
@@ -349,48 +559,15 @@ p span {
     margin: 5em 10em 5em 10em;
     padding: 1.5em;
     border: solid 1px;
-}
-/* footer */
-
-.footer {
-    background-color: #87cefa;
-    margin: 3em 0em 0em 0em;
-    height: 50px;
-}
-
-#copyright {
-    margin-top: 15px;
-    font-size: 1.2vw;
-    vertical-align: middle;
-}
+} */
 
 
 
-/* test css */
-.test-div {
-    margin-top: 15em;
-    margin-bottom: 15em;
-}
 
-
-/* form css */
-
-div h2 {
-    text-align: center;
-}
-
-.badge-required {
-    color: rgb(215, 49, 49);
-    padding: 3px;
-    margin-left: 10px;
-    font-size: 0.7em;
-    border: solid;
-    border-radius: 6px;
-}
 
 /* content */
 
-.id_select {
+/* .id_select {
     display: flex;
     justify-content: center;
     margin-top: 1em;
@@ -514,4 +691,4 @@ form button {
     background-color: rgb(255, 255, 255);
     border: solid rgb(88, 88, 88) 2px;
     border-radius: 10px;
-}
+} */

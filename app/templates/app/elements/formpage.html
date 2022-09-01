@@ -1,193 +1,180 @@
 {% load static widget_tweaks %}
 
 
-<div class="div-group" id="formpage">
-        <center>
-            <h1 class="fw-bold -2">お問い合わせ</h1>
-            <br>
-            <div id="formpage_div">
-                <img src="https://izumidensetu.s3.ap-northeast-3.amazonaws.com/img/img.PNG" alt="izuden_header">
-            </div>
-            <h4>
-                お問い合わせフォーム<br>
-                当社へのお仕事依頼・採用等のご質問などお気軽にご連絡ください
-            </h4>
-            <div id="form-content">
-                <form action="{% url 'app:index' %}" method="POST">
-                    {% csrf_token %}
-                    {% with form as f %}
-                    
-                    <div class="row">
-                        <!-- select -->
-                        <div class="col-lg-6 my-3">
-                            <div class="select mb-5">
-                                <h2>お問い合わせ内容<span class="badge-required">必須</span></h2>
-                                <hr>
-                                {{ f.select | add_class:"id_select"}}
-                                {{ f.select.errors }}
-                            </div>
-                        </div>
-                        <!-- name -->
-                        <div class="col-lg-6 my-3">
-                            <div class="name">
-                                <h2>お名前<span class="badge-required">必須</span></h2>
-                                <hr>
-                                <div class="d-flex justify-content-around">
-                                    <div>
-                                        <label id={{f.first_name.id_for_label}} class="h6">{{ f.first_name.label }}</label>
-                                        {{ f.first_name | add_class:"form-control" | add_class:f.first_name.id_for_label}}
-                                        {{ f.first_name.errors }}
-                                    </div>
-                                    <div>
-                                        <label id={{f.last_name.id_for_label}} class="h6">{{ f.last_name.label }}</label>
-                                        {{ f.last_name | add_class:"form-control" | add_class:f.last_name.id_for_label}}
-                                        {{ f.last_name.errors }}
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ruby -->
-                            <div class="ruby mt-3">
-                                <div class="d-flex justify-content-around">
-                                    <div>
-                                        {{ f.first_ruby | add_class:"form-control" | add_class:f.first_ruby.id_for_label}}
-                                        {{ f.first_ruby.errors }}
-                                    </div>
-                                    <div>
-                                        {{ f.last_ruby | add_class:"form-control" | add_class:f.last_ruby.id_for_label}}
-                                        {{ f.last_ruby.errors }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- gender -->
-                        <div class="col-lg-6 my-3">
-                            <div class="gender mb-5">
-                                <h2>性別<span class="badge-required">必須</span></h2>
-                                <hr>
-                                {{ f.gender | add_class:"id_gender text-center"}}
-                                {{ f.gender.errors }}
-                            </div>
-                        </div>
-                        <!-- age  -->
-                        <div class="col-lg-6 my-3">
-                            <div class="age mb-5">
-                                <h2>生年月日<span class="badge-required">必須</span></h2>
-                                <hr>
-                                {{ f.age | add_class:"id_age text-center"}}
-                                <p>{{ f.age.help_text|safe }}</p>
-                                {{ f.age.errors }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- sender -->
-                        <div class="col-lg-6 my-3">
-                            <div class="sender">
-                                <h2 class="label-h2">メールアドレス<span class="badge-required">必須</span></h2>
-                                <label id={{f.sender.id_for_label}} class="h6"></label>
-                                <hr>
-                                {{ f.sender | add_class:"form-control" | add_class:f.sender.id_for_label}}
-                                {{ f.sender.errors }}
-                            </div>
-                        </div>
-                        <!-- tel_number -->
-                        <div class="col-lg-6 my-3">
-                            <div class="tel_number">
-                                <h2 class="label-h2">電話番号<span class="badge-required">必須</span></h2>
-                                <label id={{f.tel_number.id_for_label}} class="h6"></label>
-                                <hr>
-                                {{ f.tel_number | add_class:"form-control" | add_class:f.tel_number.id_for_label}}
-                                {{ f.tel_number.errors }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- address-->
-                        <div class="col-lg-6 my-3">
-                            <div class="postal_code">
-                                <h2>住所</h2>
-                                <hr>
-                                <div class="d-flex justify-content-center">
-                                    <div>
-                                        <label id={{f.postal_code.id_for_label}} class="h6">{{ f.postal_code.label }}<span class="badge-required">必須</span></label>
-                                        {{ f.postal_code | add_class:"form-control" | add_class:f.postal_code.id_for_label}}
-                                        {{ f.postal_code.errors }}
-                                    </div>
-                                    <div class="ms-4">
-                                        <label id={{f.todouhuken.id_for_label}} class="h6">{{ f.todouhuken.label }}<span class="badge-required">必須</span></label>
-                                        {{ f.todouhuken | add_class:"form-control" | add_class:f.todouhuken.id_for_label}}
-                                        {{ f.todouhuken.errors }}
-                                    </div>
-                                </div>
-                                <div class="mt-3">
-                                    <label id={{f.sikucyouson.id_for_label}} class="h6 ms-5">{{ f.sikucyouson.label }}<span class="badge-required">必須</span></label>
-                                    {{ f.sikucyouson | add_class:"form-control" | add_class:f.sikucyouson.id_for_label}}
-                                    {{ f.sikucyouson.errors }}
-                                </div>
-                                <div class="mt-3">
-                                    <label id={{f.bannti.id_for_label}} class="h6 ms-5">{{ f.bannti.label }}<span class="badge-required">必須</span></label>
-                                    {{ f.bannti | add_class:"form-control" | add_class:f.bannti.id_for_label}}
-                                    {{ f.bannti.errors }}
-                                </div>
-                                <div class="mt-3">
-                                    <label id={{f.heyabangou.id_for_label}} class="h6 ms-5">{{ f.heyabangou.label }}</label>
-                                    {{ f.heyabangou | add_class:"form-control" | add_class:f.heyabangou.id_for_label}}
-                                    {{ f.heyabangou.errors }}
-                                </div>
-                            </div>
-                        </div>
-                        <!-- message -->
-                        <div class="col-lg-6 my-3">
-                            <div class="message">
-                                <h2 class="label-h2 mb-3">お問い合わせ詳細<span class="badge-required">必須</span></h2>
-                                <hr class="mb-4">
-                                <label id={{f.message.id_for_label}} class="h6"></label>
-                                {{ f.message | add_class:"form-control" | add_class:f.message.id_for_label}}
-                                {{ f.message.errors }}
-                            </div>
-                        </div>
-                    {% endwith %}
-                    <button type="submit">送信</button>
-                </form>
-            </div>
-            <div class="sentence">
-                ＜個人情報の利用目的＞<br>
-                お客様よりお預かりした個人情報は、以下の目的に限定し<br>
-                利用させていただきます。<br>
-                ・本サービスに関する顧客管理<br>
-                ・本サービスの運営上必要な事項のご連絡<br>
-                <br>
-                ＜個人情報の提供について＞<br>
-                当社ではお客様の同意を得た場合または法令に定められた場合を除き、<br>
-                取得した個人情報を第三者に提供することはいたしません。<br>
-                <br>
-                ＜個人情報の委託について＞<br>
-                弊社では、利用目的の達成に必要な範囲において、個人情報を<br>
-                外部に委託する場合があります。<br>
-                これらの委託先に対しては個人情報保護契約等の措置をとり、<br>
-                適切な監督を行います。<br>
-                <br>
-                ＜個人情報の安全管理＞<br>
-                当社では、個人情報の漏洩等がなされないよう、<br>
-                適切に安全管理対策を実施します。<br>
-                <br>
-                ＜個人情報を与えなかった場合に生じる結果＞<br>
-                必要な情報を頂けない場合は、それに対応した弊社のサービスを<br>
-                ご提供できない場合がございますので予めご了承ください。<br>
-                <br>
-                ＜個人情報の開示･訂正・削除･利用停止の手続について＞<br>
-                当社では、お客様の個人情報の開示･訂正･削除・利用停止の手続を<br>
-                定めさせて頂いております。<br>
-                ご本人である事を確認のうえ、対応させて頂きます。<br>
-                個人情報の開示･訂正･削除・利用停止の具体的手続きにつきましては、<br>
-                お電話でお問合せ下さい。<br>
-                <div>
-        </center>
-        <h1 class="text-center fw-bold mb-4">会社外観写真</h1>
-        <div id="formpage_div">
-            <img src="https://izumidensetu.s3.ap-northeast-3.amazonaws.com/img/izuden04.png" alt="izuden_formpage">
+<div id="formpage">
+    <h1>お問い合わせ</h1>
+    <div id="formpage_div"><img src="https://izumidensetu.s3.ap-northeast-3.amazonaws.com/img/img.PNG"
+            alt="izuden_formpage"></div>
+    <h2 class="mb-5">
+        <span>お問い合わせフォーム</span><br>
+        <span>当社へのお仕事依頼・採用</span><span>等のご質問など</span><br>
+        <span>お気軽にご連絡ください</span>
+    </h2>
+    <form action="{% url 'app:index' %}" method="POST">
+        {% csrf_token %}
+        {% with form as f %}
+        <!-- select -->
+        <div id="select">
+            <h2>お問い合わせ内容<span class="badge-required">必須</span></h2>
+            <hr>
+            {{ f.select | add_class:"id_select" }}
+            {{ f.select.errors }}
         </div>
+        <!-- name -->
+        <div id="name">
+            <h2>お名前<span class="badge-required">必須</span></h2>
+            <hr>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <label id={{f.first_name.id_for_label}} class="h6">{{ f.first_name.label }}</label>
+                    {{ f.first_name | add_class:"form-control" | add_class:f.first_name.id_for_label}}
+                    {{ f.first_name.errors }}
+                </div>
+                <div>
+                    <label id={{f.last_name.id_for_label}} class="h6">{{ f.last_name.label }}</label>
+                    {{ f.last_name | add_class:"form-control" | add_class:f.last_name.id_for_label}}
+                    {{ f.last_name.errors }}
+                </div>
+            </div>
+        </div>
+        <div id="ruby" class="mt-3">
+            <div class="d-flex justify-content-around">
+                <div>
+                    {{ f.first_ruby | add_class:"form-control" | add_class:f.first_ruby.id_for_label}}
+                    {{ f.first_ruby.errors }}
+                </div>
+                <div>
+                    {{ f.last_ruby | add_class:"form-control" | add_class:f.last_ruby.id_for_label}}
+                    {{ f.last_ruby.errors }}
+                </div>
+            </div>
+        </div>
+        <!-- gender -->
+        <div id="gender" class="mt-3">
+            <h2>性別<span class="badge-required">必須</span></h2>
+            <hr>
+            {{ f.gender | add_class:"id_gender text-center"}}
+            {{ f.gender.errors }}
+        </div>
+        <!-- age  -->
+        <div id="age" class="mt-3">
+            <h2>生年月日<span class="badge-required">必須</span></h2>
+            <hr>
+            {{ f.age | add_class:"id_age text-center"}}
+            <p>{{ f.age.help_text|safe }}</p>
+            {{ f.age.errors }}
+        </div>
+        <!-- sender -->
+        <div id="sender" class="mt-3">
+            <h2 class="label-h2">メールアドレス<span class="badge-required">必須</span></h2>
+            <label id={{f.sender.id_for_label}} class="h6"></label>
+            <hr>
+            {{ f.sender | add_class:"form-control" | add_class:f.sender.id_for_label}}
+            {{ f.sender.errors }}
+        </div>
+        <!-- tel_number -->
+        <div id="tel_number" class="mt-3">
+            <h2 class="label-h2">電話番号<span class="badge-required">必須</span></h2>
+            <label id={{f.tel_number.id_for_label}} class="h6"></label>
+            <hr>
+            {{ f.tel_number | add_class:"form-control" | add_class:f.tel_number.id_for_label}}
+            {{ f.tel_number.errors }}
+        </div>
+        <!-- address-->
+        <div class="postal_code">
+            <h2>住所</h2>
+            <hr>
+            <div class="d-flex justify-content-center">
+                <div>
+                    <label id={{f.postal_code.id_for_label}} class="h6">{{ f.postal_code.label }}<span
+                            class="badge-required">必須</span></label>
+                    {{ f.postal_code | add_class:"form-control" | add_class:f.postal_code.id_for_label}}
+                    {{ f.postal_code.errors }}
+                </div>
+                <div class="ms-4">
+                    <label id={{f.todouhuken.id_for_label}} class="h6">{{ f.todouhuken.label }}<span
+                            class="badge-required">必須</span></label>
+                    {{ f.todouhuken | add_class:"form-control" | add_class:f.todouhuken.id_for_label}}
+                    {{ f.todouhuken.errors }}
+                </div>
+            </div>
+            <div class="mt-3">
+                <label id={{f.sikucyouson.id_for_label}} class="h6 ms-5">{{ f.sikucyouson.label }}<span
+                        class="badge-required">必須</span></label>
+                {{ f.sikucyouson | add_class:"form-control" | add_class:f.sikucyouson.id_for_label}}
+                {{ f.sikucyouson.errors }}
+            </div>
+            <div class="mt-3">
+                <label id={{f.bannti.id_for_label}} class="h6 ms-5">{{ f.bannti.label }}<span
+                        class="badge-required">必須</span></label>
+                {{ f.bannti | add_class:"form-control" | add_class:f.bannti.id_for_label}}
+                {{ f.bannti.errors }}
+            </div>
+            <div class="mt-3">
+                <label id={{f.heyabangou.id_for_label}} class="h6 ms-5">{{ f.heyabangou.label }}</label>
+                {{ f.heyabangou | add_class:"form-control" | add_class:f.heyabangou.id_for_label}}
+                {{ f.heyabangou.errors }}
+            </div>
+        </div>
+        <!-- message -->
+        <div class="message">
+            <h2 class="label-h2 mb-3">お問い合わせ詳細<span class="badge-required">必須</span></h2>
+            <hr class="mb-4">
+            <label id={{f.message.id_for_label}} class="h6"></label>
+            {{ f.message | add_class:"form-control" | add_class:f.message.id_for_label}}
+            {{ f.message.errors }}
+        </div>
+        {% endwith %}
+        <button type="submit">送信</button>
+    </form>
+</div>
+<div class="sentence">
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col">
+                <p>
+                    ＜個人情報の利用目的＞<br>
+                    お客様よりお預かりした個人情報は、以下の目的に限定し<br>
+                    利用させていただきます。<br>
+                    ・本サービスに関する顧客管理<br>
+                    ・本サービスの運営上必要な事項のご連絡<br>
+                    <br>
+                    ＜個人情報の委託について＞<br>
+                    弊社では、利用目的の達成に必要な範囲において、個人情報を<br>
+                    外部に委託する場合があります。<br>
+                    これらの委託先に対しては個人情報保護契約等の措置をとり、<br>
+                    適切な監督を行います。<br>
+                    <br>
+                    ＜個人情報を与えなかった場合に生じる結果＞<br>
+                    必要な情報を頂けない場合は、それに対応した弊社のサービスを<br>
+                    ご提供できない場合がございますので予めご了承ください。<br>
+                    <br>
+                </p>
+            </div>
+            <div class="col-6">
+                <p>
+                    ＜個人情報の提供について＞<br>
+                    当社ではお客様の同意を得た場合または法令に定められた場合を除き、<br>
+                    取得した個人情報を第三者に提供することはいたしません。<br>
+                    <br>
+                    ＜個人情報の安全管理＞<br>
+                    当社では、個人情報の漏洩等がなされないよう、<br>
+                    適切に安全管理対策を実施します。<br>
+                    <br>
+                    ＜個人情報の開示･訂正・削除･利用停止の手続について＞<br>
+                    当社では、お客様の個人情報の開示･訂正･削除・利用停止の手続を<br>
+                    定めさせて頂いております。<br>
+                    ご本人である事を確認のうえ、対応させて頂きます。<br>
+                    個人情報の開示･訂正･削除・利用停止の具体的手続きにつきましては、<br>
+                    お電話でお問合せ下さい。<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h1 id="apperance" class="text-center fw-bold mb-5">会社外観写真</h1>
+    <div id="formpage_div">
+        <img src="https://izumidensetu.s3.ap-northeast-3.amazonaws.com/img/izuden04.png" alt="izuden_formpage">
     </div>
 </div>
