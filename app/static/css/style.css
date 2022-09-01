@@ -7,7 +7,6 @@ body {
 }
 
 .div-group {
-    width: 100%;
     height: auto;
     /* aspect-ratio: 1 / 1; */
 }
@@ -24,6 +23,7 @@ nav .navbar-brand {
     padding: 0;
     margin: 0 18vw 0 3vh;
     font-size: 3vw;
+    font-weight: bolder;
 }
 
 nav .nav-link {
@@ -47,6 +47,42 @@ nav #navbarNavAltMarkup {
 
 .nav-link:hover {
     color: rgb(255, 255, 255) !important;
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+    nav {
+        height: 120px;
+    }
+    nav .navbar-brand {
+        padding: 0;
+        margin: 0 18vw 0 3vh;
+        font-size: 6vw;
+        font-weight: bolder;
+    }
+    nav .nav-link {
+        font-size: 3vw;
+        margin-left: 20px;
+    }
+    nav .navbar-toggler {
+        margin-right: 10px;
+        width: 80px;
+        height: 80px;
+    }
+    nav .navbar-toggler-icon {
+        margin-right: 10px;
+        width: 60px;
+        height: 60px;
+    }
+    nav #navbarNavAltMarkup {
+        background-color: #87cefa;
+        padding-left: 0;
+        width: 100vw;
+        z-index: 5;
+    }
 }
 
 /* toppage*/
@@ -275,7 +311,7 @@ p span {
     resize: none;
     width: 400px;
     height: 300px;
-    font-size: 4vw;
+    font-size: 18px;
 }
 
 #formpage button {

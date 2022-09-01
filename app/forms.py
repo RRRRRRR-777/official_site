@@ -26,5 +26,5 @@ class ContactForm(forms.Form):
     sikucyouson = forms.CharField(label='市区町村', max_length=100)
     bannti = forms.CharField(label='番地', max_length=100)
     heyabangou = forms.CharField(label='建物名・部屋番号', max_length=100, required=False)
-    message = forms.CharField(label='お問い合わせ詳細', widget=forms.Textarea(attrs={'cols': '32', 'rows': '13'}))
+    message = forms.CharField(label='お問い合わせ詳細', widget=forms.Textarea(attrs={'cols': '32', 'rows': '130'}))
 
