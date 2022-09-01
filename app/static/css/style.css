@@ -362,6 +362,14 @@ p span {
     width: 20em;
 }
 
+.id_postal_code {
+    width: 10em;
+}
+
+.id_todouhuken {
+    width: 10em;
+}
+
 .id_sikucyouson {
     margin: auto;
     width: 20em;
@@ -380,8 +388,8 @@ p span {
 #formpage .id_message {
     margin: auto;
     resize: none;
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     font-size: 18px;
 }
 
@@ -393,8 +401,8 @@ p span {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 40px;
-    width: 80px;
+    height: 2em;
+    width: 6em;
     font-size: 2em;
     background-color: rgb(255, 255, 255);
     border: solid rgb(88, 88, 88) 2px;
@@ -412,7 +420,7 @@ p span {
 }
 
 .sentence p {
-    font-size: 1vw;
+    font-size: 2em;
 }
 
 #formpage_div {
