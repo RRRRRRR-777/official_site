@@ -423,6 +423,10 @@ p span {
     font-size: 2em;
 }
 
+.sentence span {
+    display: inline-blocko;
+}
+
 #formpage_div {
     display: flex;
     justify-content: center;
