@@ -6,12 +6,6 @@ body {
     padding: 0;
 }
 
-.div-group {
-    height: auto;
-    /* aspect-ratio: 1 / 1; */
-}
-
-
 
 /* navbar */
 nav {
@@ -19,16 +13,18 @@ nav {
     position: fixed;
 }
 
-nav .navbar-brand {
-    padding: 0;
-    margin: 0 18vw 0 3vh;
-    font-size: 3vw;
-    font-weight: bolder;
-}
-
-nav .nav-link {
-    font-size: 1.5vw;
+@media screen and (min-width:769px) {
+    nav .navbar-brand {
+        padding: 0;
+        margin: 0 18vw 0 3vh;
+        font-size: 3vw;
+        font-weight: bolder;
     }
+
+    nav .nav-link {
+        font-size: 1.5vw;
+    }
+}
 
 nav #navbarNavAltMarkup {
     margin-top: 5px;
@@ -490,6 +486,7 @@ div h2 {
 }
 
 form button {
+    color: black;
     display: inline-block;
     height: 2.8em;
     width: 8em;
