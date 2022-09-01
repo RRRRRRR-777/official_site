@@ -1,5 +1,5 @@
 <style>
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:769px) {
         .test-h1 {
         color: red;
         font-size: 100px;
@@ -13,10 +13,38 @@
         margin: 10em 0 10em 0
         }
     }
+    body {    background:#E4E3E4;} /* 1024px以上の幅の場合に適応される */
+@media screen and (max-width: 1024px) {
+/* 1024pxまでの幅の場合に適応される */
+    body {
+        background-color:#2262D1;
+    }
+}
+@media screen and (max-width: 768px) {
+/* 768pxまでの幅の場合に適応される */
+     body {
+        background-color:#f10010;
+    }
+}
+@media screen and (max-width: 480px) {
+/* 480pxまでの幅の場合に適応される */
+    body {
+        background-color:#F9DF2C;
+    }
+}
+@media screen and (max-width: 320px) {
+/* 320pxまでの幅の場合に適応される */
+    body {
+        background-color: #68B876;
+    }
+}
 </style>
 
 <center>
     <h1 class="test-h1">hello, world</h1>
+    <body>
+        
+    </body>
 </center>
 
 

@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
     <title>izumidensetu</title>
     <!-- default CSSstyle -->
@@ -11,12 +12,20 @@
     <!-- Bootstrap CSSstyle -->
     <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Custom CSSstyle -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" media="screen and (max-width:767px)">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+    <style>
+        body {
+            margin-right: -24px;
+        }
+    </style>
 
 </head>                 
 
 <body>
+    <!-- {% include 'test.html' %} -->
+
     <!-- ナビゲーションバー -->
     {% include 'elements/navbar.html' %}
     
