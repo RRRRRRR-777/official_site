@@ -1,8 +1,8 @@
 @charset "utf-8";
 
- /* { */
-    /* outline: 2px red solid; */
-/* } */
+/* { 
+    outline: 2px red solid; 
+} */
 
 body {
     font-size: 10px;
@@ -10,6 +10,58 @@ body {
     padding: 0;
 }
 
+h1 {
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (min-width:960px) {
+        h1 {
+            font-size: 3vw;
+        }
+        h4 {
+            font-size: 2.1vw;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        table {
+            font-size: 2.1vw;
+        }
+        #formpage_sentence span{
+            font-size: 2em;
+        }
+    }
+    @media screen and (min-width:520px) and (max-width:960px) {
+        h1 {
+            font-size: 5vw;
+        }
+        h4 {
+            font-size: 3vw;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        table {
+            font-size: 3vw;
+        }
+        #formpage_sentence span{
+            font-size: 2em;
+            line-height: 1.5em;
+        }
+    }
+    @media screen and (max-width:520px) {
+        h1 {
+            font-size: 7vw;
+        }
+        h4 {
+            font-size: 4vw;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        table {
+            font-size: 4vw;
+        }
+    }
 
 /* navbar */
 nav {
@@ -97,16 +149,13 @@ header img {
     width: 100vw;
 }
 
-#toppage h4 {
-    padding: 1em;
-    text-align: left;
-    font-size: 2.3vw;
+#toppage h4 { 
+    text-align: start;
 }
 
 /* overview */
 .overview table {
     margin: auto;
-    font-size: 2.1vw;
     width: 85vw;
 }
 
@@ -154,10 +203,6 @@ p span {
     margin-top: 5em;
 }
 
-.service-p span {
-    font-size: 1.5em;
-}
-
 .service img {
     width: 96vw;
 }
@@ -167,14 +212,13 @@ p span {
     justify-content: center;
 }
 
-.service h2 {
+.service h4 {
     text-align: start;
-    width: 70vw;
+    width: 80vw;
     padding: 1em;
     margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
-    font-size: 2.1vw;
     border: solid 2px;
 }
 
@@ -197,7 +241,6 @@ p span {
 
 #recruitment_table {
     margin: auto;
-    font-size: 2.1vw;
     width: 85vw;
 }
 
@@ -217,6 +260,10 @@ p span {
     width: 96vw;
 }
 
+/* #achievement h1 {
+    padding: 1em 0 1em 0;
+} */
+
 #achievement .div-img {
     display: flex;
     justify-content: center;
@@ -224,8 +271,11 @@ p span {
 
 #achievement h4 {
     margin-top: 1em;
-    font-size: 2.5vw;
-    line-height: 2em;
+    /* line-height: 2em; */
+}
+
+#achievement span {
+    display: inline-block;
 }
 
 /* address */
@@ -234,25 +284,16 @@ p span {
     margin: 6em 0em 6em 0em;
 }
 
-.service-columns h1 {
+/* .service-columns h1 {
     font-weight: bold;
     margin: 1em 0 1em 0;
-}
+} */
 
 #address div iframe {
     display: block;
     margin: auto;
     width: 80vw;
     height: 45vw;
-}
-
-#address h1 {
-    font-weight: bold;
-    padding-bottom: 1em;
-}
-
-#address h4 {
-    padding-bottom: 1em;
 }
 
 /* formpage */
@@ -268,8 +309,8 @@ p span {
 #formpage h1 {
     margin-bottom: 20px;
     display: block;
-    text-align: center;
 }
+
 #formpage div {
     text-align: center;
 }
@@ -278,9 +319,8 @@ p span {
 }
 
 #formpage h2 {
-    padding-top: 15px;
+    padding: 15px 5px 0 5px;
     text-align: center;
-    font-size: 4vw;
     line-height: 1.5em;
 }    
 
@@ -419,12 +459,8 @@ p span {
     padding: 2em;
 }
 
-.sentence p {
-    font-size: 2em;
-}
-
 .sentence span {
-    display: inline-blocko;
+    display: inline-block;
 }
 
 #formpage_div {

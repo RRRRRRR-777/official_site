@@ -1,6 +1,57 @@
 <style>
-    
+    h1 {
+        text-align: center;
+        color: black;
+        /* padding: 10em 0 10em 0; */
+    }
+
+    @media screen and (min-width:960px) {
+        h1 {
+            color: red;
+            font-size: 3vw;
+        }
+        h4 {
+            color: red;
+            font-size: 2.1vw;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        table {
+            font-size: 2.1vw;
+        }
+    }
+    @media screen and (min-width:520px) and (max-width:960px) {
+        h1 {
+            color: yellow;
+            font-size: 5vw;
+        }
+        h4 {
+            color: yellow;
+            font-size: 3vw;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        table {
+            font-size: 3vw;
+        }
+    }
+    @media screen and (max-width:520px) {
+        h1 {
+            color: blue;
+            font-size: 7vw;
+        }
+        h4 {
+            color: blue;
+            font-size: 4vw;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        table {
+            font-size: 4vw;
+        }
+    }
 </style>
 
 {% load static widget_tweaks %}
 
+<h1>Hello, World</h1>
