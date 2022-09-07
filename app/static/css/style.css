@@ -16,6 +16,10 @@ h1 {
     text-align: center;
 }
 
+span {
+    display: inline-block;
+}
+
 @media screen and (min-width:960px) {
         h1 {
             font-size: 3vw;
@@ -25,7 +29,9 @@ h1 {
             padding-left: 20px;
             padding-right: 20px;
         }
-        table {
+        table th,td {
+            padding-top: 5px;
+            padding-bottom: 5px;
             font-size: 2.1vw;
         }
         #formpage_sentence span{
@@ -41,7 +47,9 @@ h1 {
             padding-left: 15px;
             padding-right: 15px;
         }
-        table {
+        table th,td {
+            padding-top: 5px;
+            padding-bottom: 5px;
             font-size: 3vw;
         }
         #formpage_sentence span{
@@ -58,8 +66,10 @@ h1 {
             padding-left: 10px;
             padding-right: 10px;
         }
-        table {
-            font-size: 4vw;
+        table th,td {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 3.6vw;
         }
     }
 
@@ -137,7 +147,6 @@ nav #navbarNavAltMarkup {
 
 /* toppage*/
 header {
-    margin-bottom: 10em;
     position: relative;
 }
 
@@ -163,9 +172,9 @@ header img {
     text-align: center;
 }
 
-.overview td, th {
+.overview table td, th {
     text-align: center;
-    border: solid 2px rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
 }
 
 /* 文字を中央に揃える */
@@ -173,7 +182,7 @@ header img {
   width: 50px;
   color: rgb(255, 255, 255);
   margin-top: -20em;
-  top: calc(50% - 0.5rem);
+  top: calc(50% - 0.5   m);
   text-align: center;
   font-weight: bold;
 }
@@ -251,8 +260,11 @@ p span {
 #recruitment_table td, th {
     text-align: center;
     border: none;
-    border-left: 1px solid #333;
-    border-top: 1px solid #333;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+span{
+    display: inline-block;
 }
 
 /* achievement */
