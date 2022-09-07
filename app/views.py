@@ -40,7 +40,7 @@ def index(request):
             message = form.cleaned_data['message']
             recipients = [settings.EMAIL_HOST_USER]
 
-            subject = '会社名_'+ select +'に関するメール'
+            subject = '有限会社和泉電設_'+ select +'に関するメール'
             message = '「お問い合わせメール」'+'\n'+'お問い合わせ内容 : '+ select +'\n'+'名前 : '+ first_name +' '+ last_name +'\n'+'ふりがな : '+ first_ruby +' '+ last_ruby +'\n'+'性別 : '+ gender +'\n'+'生年月日 : '+ age +'\n'+'メールアドレス : '+ sender +'\n'+'電話番号 : '+ tel_number +'\n'+'郵便番号 : '+ postal_code +'\n'+'住所 : '+ todouhuken + sikucyouson + bannti + heyabangou +'\n'+'お問い合わせ詳細 : '+ message
 
             try:

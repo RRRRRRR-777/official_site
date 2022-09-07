@@ -131,6 +131,15 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+# # メールサーバー用
+EMAIL_HOST = 'smtp.gmail.com'
+
+
+# EMAIL_HOST_USER = 'raiseha.nekogaii777@gmail.com'
+# EMAIL_HOST_PASSWORD = 'ikxrodxsvoeksomt'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 #Heroku databaseaa
 import dj_database_url
 db_from_env = dj_database_url.config()
@@ -144,6 +153,8 @@ except ImportError:
     pass
 if not DEBUG:
  SECRET_KEY = os.environ['SECRET_KEY']
+ EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+ EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
  
  import django_heroku
  django_heroku.settings(locals())
@@ -158,18 +169,13 @@ if not DEBUG:
 
 
 # メールサーバー用
-EMAIL_HOST = 'pop.ocn.ne.jp'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 995
-EMAIL_USE_TLS = True
-
-# # メールサーバー用
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'raiseha.nekogaii777@gmail.com'
-# EMAIL_HOST_PASSWORD = 'ikxrodxsvoeksomt'
-# EMAIL_PORT = 587
+# EMAIL_HOST = 'smtp.ocn.ne.jp'
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+# EMAIL_PORT = 465
 # EMAIL_USE_TLS = True
+
+
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
