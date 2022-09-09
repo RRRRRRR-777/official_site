@@ -34,8 +34,18 @@ span {
             padding-bottom: 5px;
             font-size: 2.1vw;
         }
+        #formpage .id_message {
+            margin: auto;
+            resize: none;
+            width: 90vh;
+            height: 300px;
+            font-size: 18px;
+        }
         #formpage_sentence span{
             font-size: 2em;
+        }
+        .footer h1 {
+            font-size: 1vw;
         }
     }
     @media screen and (min-width:520px) and (max-width:960px) {
@@ -52,9 +62,19 @@ span {
             padding-bottom: 5px;
             font-size: 3vw;
         }
+        #formpage .id_message {
+            margin: auto;
+            resize: none;
+            width: 80vh;
+            height: 250px;
+            font-size: 18px;
+        }
         #formpage_sentence span{
             font-size: 2em;
             line-height: 1.5em;
+        }
+        .footer h1 {
+            font-size: 1.5vw;
         }
     }
     @media screen and (max-width:520px) {
@@ -70,6 +90,16 @@ span {
             padding-top: 5px;
             padding-bottom: 5px;
             font-size: 3.6vw;
+        }
+        #formpage .id_message {
+            margin: auto;
+            resize: none;
+            width: 40vh;
+            height: 180px;
+            font-size: 12px;
+        }
+        .footer h1 {
+            font-size: 1vw;
         }
     }
 
@@ -437,14 +467,6 @@ span{
     width: 20em;
 }
 
-#formpage .id_message {
-    margin: auto;
-    resize: none;
-    width: 300px;
-    height: 200px;
-    font-size: 18px;
-}
-
 #formpage button {
     display: flex;
     justify-content: center;
@@ -485,19 +507,10 @@ span{
 
 /* footer */
 
-.footer {
-    text-align: center;
+.footer h1 {
     background-color: #87cefa;
-    width: 100vw;
-    height: 25px;
+    margin: 0;
 }
-
-.footer span {
-    padding-top: 2%;
-    margin-top: 15px;
-    font-size: 1.2vw;
-}
-
 
 
 /* form css */
@@ -514,241 +527,3 @@ div h2 {
     border: solid;
     border-radius: 6px;
 }
-/* formpage */
-/* #formpage h4 span {
-    display: inline-block;
-}
-
-#formpage_div {
-    text-align: center;
-}
-
-#formpage_div img {
-    margin: 0;
-    width: 96vw;
-}
-
-#formpage h1 {
-    margin: 1.5em 0 1.5em 0;
-    font-size: 3.8vw;
-    font-weight: bold;
-}
-
-#formpage h2 {
-    padding-top: 3px;
-    width: 90%;
-    font-size: 4vw;
-}
-
-#form-content {
-    font-size: 1.5vw;
-}
-
-#id_select {
-    width: 150px;
-}
-
-#id_select label {
-    font-size: 3.5vw;
-    margin-bottom: 30px;
-}
-
-#formpage .id_select {
-    margin-bottom: 30px;
-    padding: 0;
-    width: 2em;
-    height: 0.5em;
-    list-style: none;
-}
-
-#id_gender label {
-    font-size: 3.5vw;
-}
-
-#formpage .id_gender {
-    margin: 30px 0 0 0;
-    padding: 0;
-    width: 2em;
-    height: 0.5em;
-    list-style: none;
-}
-
-#formpage .field {
-    margin-top: 20px;
-}
-
-#formpage label {
-    display: block;
-}
-
-#formpage .id_message {
-    resize: none;
-    width: 400px;
-    height: 300px;
-    font-size: 18px;
-}
-
-#formpage .id_sender {
-    width: 20em;
-}
-
-#formpage .id_tel_number {
-    width: 20em;
-}
-
-#formpage .postal_code input {
-    width: 8em;
-}
-
-#formpage button {
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 5px;
-    width: 10%;
-    height: 30%;
-    font-size: 2.5vw;
-}
-
-#formpage .help {
-    color: red;
-}
-
-#formpage .sentence {
-    font-size: 1vw;
-    margin: 5em 10em 5em 10em;
-    padding: 1.5em;
-    border: solid 1px;
-} */
-
-
-
-
-
-/* content */
-
-/* .id_select {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-    font-size: 2em;
-}
-
-#id_select div {
-    display: inline-block;
-    text-align: center;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-#id_select div label{
-    display: inline-block;
-    text-align: center;
-}
-
-#id_select div label input {
-    text-align: center;
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-
-
-#id_first_name {
-    text-align: start;
-}
-
-#id_last_name {
-    text-align: start;
-}
-
-.id_gender {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-    font-size: 2em;
-}
-
-#id_gender div {
-    display: inline-block;
-    text-align: center;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-#id_gender div label{
-    display: inline-block;
-    text-align: center;
-}
-
-#id_gender div label input {
-    text-align: center;
-    margin-left: 8px;
-    width: 20px;
-    height: 20px;
-}
-
-
-.id_age {
-    margin: 1.2em 0 -0.5em;
-    text-align: center;
-    align-items: center;
-    font-size: 20px;
-    width: 220px;
-    height: 50px;
-}
-
-.age p {
-    font-weight: bold;
-    margin-top: 1.2em;
-    font-size: 1.5em;
-}
-
-#id_sender {
-    width: 400px;
-    margin-top: 2.5em;
-    margin-bottom: 1em;
-}
-
-#id_tel_number {
-    width: 400px;
-    margin-top: 2.5em;
-    margin-bottom: 1em;
-}
-
-.id_postal_code {
-    width: 200px;
-}
-
-.h6 {
-    text-align: start;
-    margin-left: 3px;
-}
-
-.id_todouhuken {
-    width: 200px;
-}
-
-.id_sikucyouson {
-    width: 380px;
-}
-
-.id_bannti {
-    width: 380px;
-}
-
-.id_heyabangou {
-    width: 380px;
-}
-
-form button {
-    color: black;
-    display: inline-block;
-    height: 2.8em;
-    width: 8em;
-    font-size: 2em;
-    background-color: rgb(255, 255, 255);
-    border: solid rgb(88, 88, 88) 2px;
-    border-radius: 10px;
-} */
