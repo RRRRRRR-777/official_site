@@ -144,7 +144,7 @@ span {
             font-size: 1.5vw;
         }
     }
-    @media screen and (max-width:520px) {
+    @media screen and (min-width:300px) and (max-width:520px) {
         h1 {
             font-size: 7vw;
         }
@@ -172,6 +172,10 @@ span {
 
         #ruby input {
             width: 7em;
+        }
+
+        .id_gender label {
+            font-size: 5em;
         }
 
         .id_sender {
@@ -204,6 +208,87 @@ span {
 
         .id_heyabangou {
             width: 15em;
+        }
+        .footer h1 {
+            font-size: 1vw;
+        }
+    }
+
+    @media screen and (max-width:300px) {
+        h1 {
+            font-size: 7vw;
+        }
+        h4 {
+            font-size: 4vw;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        table th,td {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 3.6vw;
+        }
+        #formpage .id_message {
+            margin: auto;
+            resize: none;
+            width: 25vh;
+            height: 180px;
+            font-size: 12px;
+        }
+
+        #id_select label {
+            font-size: 1vw;
+            width: 2vw;
+        }
+
+        #id_select input {
+            width: 3vw;
+        }
+        
+        #name input {
+            width: 7.5em;
+            font-size: 1em;
+        }
+
+        #ruby input {
+            width: 7.5em;
+            font-size: 1em;
+        }
+
+        .id_gender label {
+            font-size: 2em;
+        }
+
+        .id_sender {
+            width: 13em;
+        }
+
+        .id_tel_number {
+            width: 14em;
+        }
+
+        .id_postal_code {
+            width: 5em;
+        }
+
+        .id_todouhuken {
+            width: 5em;
+        }
+
+        .id_sikucyouson {
+            width: 13em;
+        }
+
+        .id_bannti {
+            width: 13em;
+        }
+
+        .id_heyabangou {
+            width: 13em;
+        }
+
+        .id_heyabangou {
+            width: 13em;
         }
         .footer h1 {
             font-size: 1vw;
@@ -251,7 +336,7 @@ nav #navbarNavAltMarkup {
     }
 }
 
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
     nav {
         height: 85px;
     }
