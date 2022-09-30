@@ -167,11 +167,11 @@ span {
         }
         
         #name input {
-            width: 10em;
+            width: 7em;
         }
 
         #ruby input {
-            width: 10em;
+            width: 7em;
         }
 
         .id_sender {
@@ -241,12 +241,13 @@ nav #navbarNavAltMarkup {
     nav .navbar-brand {
         padding: 0;
         margin: 0 18vw 0 3vh;
-        font-size: 3vw;
+        font-size: 3.5vw;
         font-weight: bolder;
     }
 
     nav .nav-link {
-        font-size: 1.5vw;
+        font-size: 2vw;
+        margin-top: 0.5em;
     }
 }
 
@@ -261,7 +262,8 @@ nav #navbarNavAltMarkup {
         font-weight: bolder;
     }
     nav .nav-link {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        margin-top: 0.3em;
         margin-left: 20px;
     }
     nav .navbar-toggler {
@@ -487,8 +489,8 @@ span{
 }
 
 #id_select label{
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
     margin-top: 2em;
     font-size: 3vw;
     width: 15vw;
@@ -513,8 +515,8 @@ span{
 }
 
 #id_gender label{
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
     margin-top: 2em;
     font-size: 3vw;
     width: 15vw;
@@ -540,6 +542,11 @@ span{
 .id_tel_number {
     margin: auto;
     margin-top: 3em;
+    margin-right: 1em;
+}
+
+.id_todouhuken {
+    margin-left: 1em;
 }
 
 .id_sikucyouson {
