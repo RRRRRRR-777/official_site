@@ -324,14 +324,14 @@ nav #navbarNavAltMarkup {
 
 @media screen and (min-width:768px) {
     nav .navbar-brand {
-        padding: 0;
+        padding: 5px;
         margin: 0 18vw 0 3vh;
         font-size: 3.5vw;
         font-weight: bolder;
     }
 
     nav .nav-link {
-        font-size: 1.5vw;
+        font-size: 1vw;
         margin-top: 0.5em;
     }
 }
@@ -341,7 +341,7 @@ nav #navbarNavAltMarkup {
         height: 85px;
     }
     nav .navbar-brand {
-        padding: 0;
+        padding: 5px;
         margin: 0 18vw 0 3vh;
         font-size: 6vw;
         font-weight: bolder;
